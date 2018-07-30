@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService{
 	/**
 	 * 构造方法
 	 */
-	private UserServiceImpl() {
+	public UserServiceImpl() {
 		
 	}
 	
@@ -48,6 +48,8 @@ public class UserServiceImpl implements UserService{
 			conn = DBUtil.getConnection();
 			//调用dao工厂类的getDao方法，取得指定类型的dao接口的实现了，并赋值给dao接口变量
 			UserDao userMgrDao = (UserDao)DaoFactory.getDao(conn, EnumType.USER_DAO);
+			//
+			user=userMgrDao.login(name, password);
 		} catch (DaoException e) {
 			//将自定义异常并抛出
 			throw e;			
@@ -68,14 +70,71 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public UserDto selectuerid(int userid) {
-		// TODO Auto-generated method stub
-		return null;
+		// 声明数据库连接对象，用于保存数据库连接对象
+				Connection conn = null;
+				UserDto user = null;
+				try {
+					//调用数据库工具类的getConnection方法，取得数据库连接对象，并赋予给数据库连接对象变量
+					conn = DBUtil.getConnection();
+					//调用dao工厂类的getDao方法，取得指定类型的dao接口的实现了，并赋值给dao接口变量
+					UserDao userMgrDao = (UserDao)DaoFactory.getDao(conn, EnumType.USER_DAO);
+					//
+					user=userMgrDao.selectuerid(userid);
+				} catch (DaoException e) {
+					//将自定义异常并抛出
+					throw e;			
+				} catch (Exception e) {
+					//将异常封装成定义异常并抛出
+					e.printStackTrace();
+					
+				}
+				return user;
 	}
 
 	@Override
 	public UserDto selectusername(String username) {
-		// TODO Auto-generated method stub
-		return null;
+		// 声明数据库连接对象，用于保存数据库连接对象
+				Connection conn = null;
+				UserDto user = null;
+				try {
+					//调用数据库工具类的getConnection方法，取得数据库连接对象，并赋予给数据库连接对象变量
+					conn = DBUtil.getConnection();
+					//调用dao工厂类的getDao方法，取得指定类型的dao接口的实现了，并赋值给dao接口变量
+					UserDao userMgrDao = (UserDao)DaoFactory.getDao(conn, EnumType.USER_DAO);
+					//
+					user=userMgrDao.selectusername(username);
+				} catch (DaoException e) {
+					//将自定义异常并抛出
+					throw e;			
+				} catch (Exception e) {
+					//将异常封装成定义异常并抛出
+					e.printStackTrace();
+					
+				}
+				return user;
+	}
+
+	@Override
+	public UserDto selectAll() {
+		// 声明数据库连接对象，用于保存数据库连接对象
+				Connection conn = null;
+				UserDto user = null;
+				try {
+					//调用数据库工具类的getConnection方法，取得数据库连接对象，并赋予给数据库连接对象变量
+					conn = DBUtil.getConnection();
+					//调用dao工厂类的getDao方法，取得指定类型的dao接口的实现了，并赋值给dao接口变量
+					UserDao userMgrDao = (UserDao)DaoFactory.getDao(conn, EnumType.USER_DAO);
+					//
+					user=userMgrDao.selectAll();
+				} catch (DaoException e) {
+					//将自定义异常并抛出
+					throw e;			
+				} catch (Exception e) {
+					//将异常封装成定义异常并抛出
+					e.printStackTrace();
+					
+				}
+				return user;
 	}
 	
 

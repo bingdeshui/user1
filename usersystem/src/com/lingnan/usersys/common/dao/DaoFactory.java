@@ -3,6 +3,7 @@ package com.lingnan.usersys.common.dao;
 import java.sql.Connection;
 
 import com.lingnan.usersys.commom.exception.ServiceException;
+import com.lingnan.usersys.user.dao.UserDaoImpl;
 
 
 public class DaoFactory {
@@ -17,8 +18,8 @@ public class DaoFactory {
 	public static BaseDao getDao(Connection conn, String type) {
 		if("user".equals(type)) {
 			//返回实例化的dao对象
-			//return new UserDaoImpl(conn);
-			return null;
+			return new UserDaoImpl(conn);
+			
 		}
 		else {
 			throw new ServiceException("连接不成功");

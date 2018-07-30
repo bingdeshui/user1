@@ -42,5 +42,13 @@ public interface UserDao extends BaseDao {
 	 * @return
 	 */
 	public UserDto selectusername(String  username);
+	
+	/**
+	 * 查找全部数据
+	 * @return
+	 */
+	public UserDto selectAll();
+	
+	
 
 }
