@@ -10,7 +10,7 @@ public class DateException extends  ServiceException{
 	}
 	
 	/**
-	 * 参数为字符串的构造方法
+	 * 参数为字符串的构造方法，要打印出来的
 	 * @param arg0
 	 */
 	public DateException(String arg0) {
@@ -27,8 +27,8 @@ public class DateException extends  ServiceException{
 	
 	/**
 	 * 两个参数的构造方法
-	 * @param s
-	 * @param d
+	 * @param s 打印出来的字符串
+	 * @param d 要抛出的异常
 	 */
 	public DateException(String s, Throwable d) {
 		super(s, d);

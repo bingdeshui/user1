@@ -5,7 +5,7 @@ import com.lingnan.usersys.usermgr.domain.UserDto;
 public interface BaseFrame {
 	
 	/**
-	 * 页面显示
+	 * 用户操作页面显示
 	 */
 	public void show();
 	
@@ -16,22 +16,26 @@ public interface BaseFrame {
 	public void addShow(String type);
 	
 	/**
-	 * 登录
+	 * 登录页面
 	 */
 	public void loginShow();
 	
 	/**
-	 * 查询
+	 * 查询信息的界面
 	 */
 	public void searchShow(String type);
 	
 	/**
-	 * 修改
+	 * 修改信息的界面
 	 * @param type
 	 * @param user
 	 */
 	public void updateShow(String type,UserDto user);
 	
-	
+	/**
+	 * 删除信息的界面
+	 * @param userid
+	 */
+	public void deleteShow();
 
 }

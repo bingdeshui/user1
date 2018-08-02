@@ -3,7 +3,7 @@ package com.lingnan.usersys.commom.exception;
 public class DaoException extends RuntimeException {
 	
 	/**
-	 * 构造方法
+	 * 无参数构造方法
 	 */
 	public DaoException() {
 		
@@ -26,8 +26,8 @@ public class DaoException extends RuntimeException {
 	}
 	/**
 	 * 两个参数的构造方法
-	 * @param s
-	 * @param d
+	 * @param s 打印出来的异常
+	 * @param d 要抛出的异常
 	 */
 	public DaoException(String s, Throwable d) {
 		super(s, d);

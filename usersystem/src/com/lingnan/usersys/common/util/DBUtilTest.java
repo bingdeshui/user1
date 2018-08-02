@@ -8,7 +8,9 @@ import org.junit.Test;
 
 public class DBUtilTest {
 
-	@Test
+	/**
+	 * 测试连接
+	 */
 	public void testGetConnection() {
 		Connection conn= DBUtil.getConnection();
 		System.out.println(conn);

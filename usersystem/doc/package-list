@@ -1,0 +1,10 @@
+com.lingnan.usersys.commom.exception
+com.lingnan.usersys.common.constant
+com.lingnan.usersys.common.dao
+com.lingnan.usersys.common.util
+com.lingnan.usersys.user.controller
+com.lingnan.usersys.user.dao
+com.lingnan.usersys.user.service
+com.lingnan.usersys.usermgr.domain
+com.lingnan.usersys.usermgr.view
+com.lingnan.usesys.user.start

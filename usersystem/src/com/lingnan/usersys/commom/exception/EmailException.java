@@ -3,14 +3,14 @@ package com.lingnan.usersys.commom.exception;
 public class EmailException  extends  ServiceException {
 	
 	/**
-	 * 构造方法
+	 * 无参数构造方法
 	 */
 	public EmailException() {
 		
 	}
 	
 	/**
-	 * 参数为字符串的构造方法
+	 * 参数为字符串的构造方法，是打印出来的
 	 * @param arg0
 	 */
 	public EmailException(String arg0) {
@@ -27,8 +27,8 @@ public class EmailException  extends  ServiceException {
 	
 	/**
 	 * 两个参数的构造方法
-	 * @param s
-	 * @param d
+	 * @param s 需要打印出来的异常
+	 * @param d 抛出的异常
 	 */
 	public EmailException(String s, Throwable d) {
 		super(s, d);

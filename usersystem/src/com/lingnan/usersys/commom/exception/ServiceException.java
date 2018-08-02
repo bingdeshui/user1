@@ -3,7 +3,7 @@ package com.lingnan.usersys.commom.exception;
 public class ServiceException extends RuntimeException {
 	
 	/**
-	 * 构造方法
+	 * 无参数的构造方法
 	 */
 	public ServiceException() {
 		
@@ -27,8 +27,8 @@ public class ServiceException extends RuntimeException {
 	
 	/**
 	 * 两个参数的构造方法
-	 * @param s
-	 * @param d
+	 * @param s 需要打印出来的异常
+	 * @param d 抛出的异常
 	 */
 	public ServiceException(String s, Throwable d) {
 		super(s, d);

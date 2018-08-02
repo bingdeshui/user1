@@ -50,20 +50,29 @@ public class TypeUtil {
     	return time;
     }
     
+    /**
+     * 判断邮箱的格式是否正确
+     * @param email 输入的邮箱
+     * @return 
+     */
     public static boolean checkEmail(String email) {
-    	boolean flag = true;
-    	 try {
-    		 String mail = "^\\s*\\w(?:\\.{0,1}[\\w-]*@[a-zA-Z0-9]+(?:[-.]"+
-    	               "[a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$";
-    		 Pattern regex = Pattern.compile(mail);
-             Matcher matcher = regex.matcher(email);
-             flag = matcher.matches();
-    	 } catch (Exception e) {
-    		 
-    	 }
-		return flag;
+    	boolean flag = false;
+        try{
+              String check = "^([a-z0-9A-Z]+[-|_|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+              Pattern regex = Pattern.compile(check);
+              Matcher matcher = regex.matcher(email);
+              flag = matcher.matches();
+            }catch(Exception e){
+                flag = false;
+            }
+        return flag;
     }
 	
+    /**
+     * 判断是否为空
+     * @param word
+     * @return
+     */
     public static boolean checkEmpty(CharSequence word) {
     	
     		if(word == null || word.length() == 0)

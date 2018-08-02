@@ -11,13 +11,18 @@ import com.lingnan.usersys.usermgr.domain.UserDto;
 
 public class UserDaoImplTest {
 
-	@Test
+	/**
+	 * 测试登录的方法
+	 */
 	public void testLogin() {
 		UserDto v=new UserDto() ;
 		//v.setUserid(10);
 		UserDaoImpl s = new UserDaoImpl();
-		boolean flag =s.deleteUser(11);
-		System.out.println(flag);
+		s. selectpage(1,2);
+		
+		System.out.println("---------");
+		s. selectpage(2,2);
+		//System.out.println(flag);
 	}
 
 }
